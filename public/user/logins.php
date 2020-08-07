@@ -1,6 +1,6 @@
 <?php
 $config=[
-    'host'=>'127.0.0.1',
+    'host'=>'192.168.91.128',
     'port'=>'3306',
     'dbname'=>'shop',
     'user'=>'root',
@@ -24,7 +24,7 @@ $sql="select * from p_user where "."$account="."'$name'".'    '.'and'.'    '."pa
     $stmt->bindParam('password',$pwd);
     $stmt->execute();
     $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
+
     if($res){
         echo "登录成功";
         header("refresh:2,url='/test/list.html'");
